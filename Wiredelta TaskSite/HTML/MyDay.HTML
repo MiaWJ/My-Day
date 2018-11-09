@@ -1,0 +1,482 @@
+<HTML>
+    <head>
+        <!-- link to create animation for "My day" -->
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>
+            My Day!
+        </title>
+    </head>
+
+<!-- My header with animation "My day" -->
+
+<div id="content">
+<body onLoad="new date();" ;>
+    <div id=container>
+        <div class="w3-container w3-center w3-animate-top">    
+            <div class="header">
+             <h2><center> <p><font size="300" face=phosphate inline>My Day!</font></p></center></h1>
+        </div>      
+    </div>
+        
+<!-- The table over the array" -->
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h3><font face="Gill Sans" color="#474247">My weekly schedule</h2>
+            <h5><font face="Gill Sans" color="#474247">For week 45</h5>
+            <p><font face="Gill Sans" color="#474247">Hey guys this is my spirituel scheme of the week</p>     
+        <div id="output">
+        <table table border="1" id="taskTable" class=style1>
+            <tr>
+            <th>Day</th><th>Time</th><th>Description</th>
+            </tr>
+            <hr>
+        </table>      
+        </div>
+    </div>
+</body>
+  
+</div>
+<!-- The current time -->
+<div class="rightcolumn">
+     <div class="card">
+        <div class="center">
+          <table>
+            <th><font face="Gill Sans" color="#474247"><p>Today is</p> <p id="Day"> </p> <p id="date"</p><p> </p> <p id="Months"</p> <p id="Year"</p></th>
+          </table>  
+      </div>        
+    </div>
+</div>
+ <!-- The picture of my dog -->       
+<div class="rightcolumn">
+     <div class="card">
+        <div class="center">
+            <p><font face="Gill Sans" color="#474247">Hey guys this is my new puppy</p>
+            <div>
+          <img src="Alma.png"style="width:100px;height:100px;"/>
+         </div>         
+        </div>
+    </div> 
+</div>
+<!-- The button for changing background color -->
+<div class="rightcolumn">
+     <div class="card">
+        <div class="Dropdown">
+      <button class="dropbtn">Choose background</button>
+        <div class="dropdown-content">
+            <a href="#"><button type="button" onclick="colorChangeGreen()">green</button></a>
+            <a href="#"><button type="button" onclick="colorChangeRed()">red</button></a>
+            <a href="#"><button type="button" onclick="colorChangeBlue()">blue</button></a>
+            </div>
+        </div>
+    </div>        
+</div>
+<!-- The button for changing the pagetitle -->
+<div class="rightcolumn">
+    <div class="card">
+        <p><font face="Gill Sans" color="#474247">Change the pagetitle here: </p>
+        <div class='printTitleValue' id='printTitleValue'></div>
+        <input type='pageTitleChange' name='fname' class='pageTitle' id='pageTitle'>
+    </div>
+</div>
+<!-- The current time down in the corner -->
+<div class="rightcolumn">
+    <div class="card">
+        <h5><font face="Gill Sans" color="#474247">The time is</5h>
+<script>
+    var AM_PM_variable = '';
+    var date_var = new Date();
+    var curr_hour = date_var.getHours();
+        if (curr_hour < 12)
+            {
+                AM_PM_variable = 'AM';
+            }
+        else
+            {
+                AM_PM_variable = 'PM';
+            }
+        if (curr_hour == 0)
+            {
+                curr_hour = 12;    
+            }
+        if (curr_hour > 12)
+            {
+                curr_hour = curr_hour - 12;
+            }
+                    
+            var curr_min = date_var.getMinutes();
+            document.write(curr_hour + ':' + curr_min + ' ' + AM_PM_variable);
+</script>
+        </div>
+    </div>
+</div>
+<!-- The weather showcase in the bottom" -->
+<div id="footer">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/55d6812d57/copenhagen/" data-label_1="COPENHAGEN" data-label_2="WEATHER" data-theme="original" >COPENHAGEN WEATHER</a>
+     </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      </body>
+</HTML>
+<style>
+
+/* Here is the combination for the dropdowm field */
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #474247;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #474247;}
+
+.center {
+    line-height: 30px;
+    height: 150px;
+    
+    text-align: center;
+}
+
+.center p {
+    line-height: 1,5;
+    display: inline-block;
+    vertical-align: middle;
+}
+table  {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td{
+    text-align: left;
+    padding: 2px;
+}
+/* General layout for the webpage */
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+#container {
+    margin: 0 auto;
+    text-align: left;
+    width: 960px;
+    }
+#container p {
+    display: inline;
+    }
+
+#navigation li {
+	display: inline; 
+    }
+#content {
+    float: left;
+    width: 900px;
+    }
+#sidebar {
+    float: left;
+    width: 260px;
+    margin: 300 auto;
+    }
+#footer {
+    clear: both;
+    width: 1160px;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Gill Sans;
+    padding: 20px;
+    background: #f1f1f1;
+}
+.header {
+    padding: 30px;
+    font-size: 60px;
+    text-align: center;
+    background: white;
+}
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+</style>
+
+<!-- The script section begins here -->
+
+<script src="myscripts.js"></script>
+
+
+<script>
+// The function for the dropdown menu to make it change colours //
+
+function colorChangeGreen() {
+    document.body.style.backgroundColor = "#73D173";
+};
+function colorChangeRed() {
+    document.body.style.backgroundColor = "pink";
+};
+function colorChangeBlue() {
+    document.body.style.backgroundColor = "lightblue";
+};
+
+</script>
+<script>
+document.getElementById('inputBoxId').addEventListener('keypress', function( event ) {
+    if( event.keyCode === 13 ) {  
+        document.title = this.value;
+    }
+}, false);
+
+</script>
+
+<script>
+// Show current date function //
+    var d = new Date();
+    var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    document.getElementById("Day").innerHTML = days[d.getDay()];
+
+    var getDay = new Date();
+    document.getElementById('date').innerHTML = ''+ getDay.getDate()+ 'th';
+
+
+    var d = new Date();
+    var months = [" January "," February "," March "," April "," May "," June "," July "," August "," September "," October "," November "," December "];
+    document.getElementById("Months").innerHTML = months[d.getMonth()];
+
+
+    var d = new Date();
+    document.getElementById("Year").innerHTML = d.getFullYear();
+</script>
+
+<script>
+    //Array for tasktable //
+var presArray = [{
+	 "id": 1,
+        "day": "Monday",
+        "time": "08:00",
+        "description": "Laugh to Your Heart’s Content" 
+    },
+    {   
+        "id": 2,
+        "day": "Monday",
+        "time": "11:00",
+        "description": "Dance Like No One’s Watching"
+     },
+    {   
+        "id": 3,
+        "day": "Monday",
+        "time": "16:00",
+        "description": "Make Dinner for homeless guy" 
+    },
+    {   
+        "id": 4,
+        "day": "Tuesday",
+        "time": "07:00",
+        "description": "Change Your Morning Routine" 
+    },
+    {   
+        "id": 5,
+        "day": "Tuesday",
+        "time": "10:00",
+        "description": "Go People Watching" 
+    },
+    {   
+        "id": 6,
+        "day": "Tuesday",
+        "time": "18:00",
+        "description": "Do Something Stupid" 
+    },
+    {   
+        "id": 7,
+        "day": "Wednesday",
+        "time": "08:00",
+        "description": "Sing in the Shower" 
+    },
+    {   
+        "id": 8,
+        "day": "Wednesday",
+        "time": "13:00",
+        "description": "Listen to Nature Sounds" 
+    },
+    {   
+        "id": 9,
+        "day": "Wednesday",
+        "time": "15:00",
+        "description": "Join a Club" 
+    },
+    {   
+        "id": 10,
+        "day": "Thursday",
+        "time": "06:00",
+        "description": "Strike a Pose" 
+    },
+    {   
+        "id": 11,
+        "day": "Thursday",
+        "time": "09:00",
+        "description": " Challenge Yourself" 
+    },
+    {   
+        "id": 12,
+        "day": "Thursday",
+        "time": "20:00",
+        "description": "Reconnect with an Old Friend" 
+    },
+    {   
+        "id": 13,
+        "day": "Friday",
+        "time": "09:00",
+        "description": "Learn a Joke" 
+    },
+    {   
+        "id": 14,
+        "day": "Friday",
+        "time": "12:00",
+        "description": "Become an Expert" 
+    },
+    {   
+        "id": 15,
+        "day": "Friday",
+        "time": "19:00",
+        "description": "Take a Class" 
+    },
+    {   
+        "id": 16,
+        "day": "Saturday",
+        "time": "07:00",
+        "description": "Change Your Look" 
+    },
+    {   
+        "id": 17,
+        "day": "Saturday",
+        "time": "12:00",
+        "description": "Excite Your Palate" 
+    },
+    {   
+        "id": 18,
+        "day": "Saturday",
+        "time": "21:00",
+        "description": "Begin a Diary" 
+    },
+    {   
+        "id": 19,
+        "day": "Sunday",
+        "time": "10:00",
+        "description": "Embrace Your Curiosity" 
+    },
+    {   
+        "id": 20,
+        "day": "Sunday",
+        "time": "11:00",
+        "description": "Pretend to Be a Tourist" 
+    },
+    {   
+        "id": 21,
+        "day": "Sunday",
+        "time": "17:00",
+        "description": "Drive Away with No Destination in Mind"   
+    
+}];
+//Functions for printing array into HTML table
+function displayTable(taskTable)
+{   
+    var table = document.getElementById('taskTable');
+
+    for (var i = 0; i < taskTable.length; ++i)
+    {   
+        var taskTables = taskTable[i];
+
+        var row = document.createElement('tr');
+
+        var properties = [ 'day', 'time', 'description'];
+
+        for (var j = 0; j < properties.length; ++j)
+        {   
+            var cell = document.createElement('td');
+            
+            cell.innerHTML = taskTables[properties[j]];
+            
+            row.appendChild(cell);
+        }
+       
+        table.appendChild(row);
+    }
+}
+displayTable(presArray);
+</script>
+
+<script>
+// This is the function for changing the pagetitle//
+
+var inputBox = document.getElementById('pageTitle');
+
+inputBox.onkeyup = function()
+    {
+    document.getElementById('printTitleValue').innerHTML = inputBox.value;
+    document.title = this.value;
+}
+</script>
+
+<script>
+    // Function for showing the weather forecast//
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
